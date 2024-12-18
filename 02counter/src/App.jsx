@@ -12,14 +12,22 @@ function App() {
   const addvalue =() =>{
     console.log("clicked",counter);
     // counter=counter+1
-    setcounter(counter+1)
+    setcounter(prevcounter => prevcounter+1)
+    setcounter(prevcounter => prevcounter+1)
+    //increase counter multiple time on a single click
+
+    // setcounter(counter+1)
+    // setcounter(counter+1)
+    // increases  counter onlty one time
   }
 
   const removevalue =() =>{
     console.log("clicked",counter);
     // counter=counter+1
+    setcounter(prevcounter => prevcounter+1)
+    
     setcounter(counter-1)
-  }
+   }
 
   return (
     <>
