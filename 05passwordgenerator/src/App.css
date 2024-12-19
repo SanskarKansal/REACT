@@ -1,42 +1,145 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+
+/* Apply background color to the body element */
+body {
+  background-color: #c67373 !important; /* Red background */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Optional: Set a default font */
+  color: white; /* Make text white to contrast with the red background */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically and horizontally center the content */
+}
+
+/* Ensure the container takes full height of the viewport */
+html, body {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem; /* You can adjust this width as per your design */
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(133, 106, 106, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-orange-500 {
+  color: #a45218; /* Orange text */
+}
+
+.bg-gray-700 {
+  background-color: #c69393; /* Light red-gray background */
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.flex {
+  display: flex;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.items-center {
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.gap-x-1 {
+  gap: 0.25rem;
 }
 
-.card {
-  padding: 2em;
+.cursor-pointer {
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+/* Styling the textbox (input section) */
+input {
+  background-color: #e0799f; /* Soft pink background for the input box */
+  color: white; /* White text inside the input box */
+  border: 1px solid #8c2f2f; /* Light border around the input box */
+  padding: 10px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: calc(100% - 4rem); /* Make it full width minus the space for the button */
+}
+
+input:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #a45218; /* Highlight border with the orange color */
+  background-color: #c67c7c; /* Slightly lighter background on focus */
+}
+
+/* Styling the "copy" button */
+button {
+  background-color: #e27fb6; /* Pink background for the button */
+  color: white; /* White text on the button */
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ca44a2; /* Darker pink when hovered */
+}
+
+button:active {
+  background-color: #e07eb4; /* Even darker pink when clicked */
+}
+
+/* Increase size of checkboxes */
+input[type="checkbox"] {
+  transform: scale(2.5); /* This will scale up the checkbox size */
+  margin-right: 0.5rem; /* Optional: space between the checkbox and label */
+}
+
+/* Styling the range slider for "Length" setting */
+input[type="range"] {
+  width: 180px; /* Decreased width of the slider */
+  background-color: #ddd; /* Light color for the range slider */
+  border-radius: 0.5rem;
+  height: 8px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #a45218; /* Match the thumb to the orange color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Remove focus outline */
 }
