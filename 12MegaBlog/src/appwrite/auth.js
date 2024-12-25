@@ -12,6 +12,7 @@ export class AuthService{
         this.account = new Account(this.client);
             
     }
+    
     async createAccount({email, password, name}) {
         // eslint-disable-next-line no-useless-catch
         try {
@@ -32,7 +33,7 @@ export class AuthService{
     async login({email, password}) {
         // eslint-disable-next-line no-useless-catch
         try {
-            return await this.account.createEmailSession(email, password);
+            return await this.account.createSession(email, password);
         } catch (error) {
             throw error;
         }
