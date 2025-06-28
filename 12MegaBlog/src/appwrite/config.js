@@ -5,6 +5,7 @@ export class Service{
     client = new Client();
     databases;
     bucket;
+    
     constructor(){
         this.client
         .setEndpoint(conf.appwriteUrl)
@@ -95,6 +96,8 @@ export class Service{
         }
     }
 
+    // file upload service
+
     async uploadFile(file){
         try {
             return await this.bucket.createFile(
@@ -127,8 +130,8 @@ export class Service{
             fileId
         )
     }
-    
 }
+
 
 const service = new Service()
 export default service
